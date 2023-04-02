@@ -3,6 +3,8 @@ package com.kazeneko.SimpleBookmark.Models;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "bookmarks")
 @AllArgsConstructor
@@ -18,4 +20,7 @@ public class Bookmark {
     private String title;
     @Column(name = "url", nullable = false)
     private String url;
+    //BAD STYLE
+    @Column(name = "tags", nullable = false)
+    private List<String> tags;
 }
