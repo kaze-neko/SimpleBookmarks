@@ -1,0 +1,17 @@
+version: '1'
+services:
+  simple_bookmark:
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - database
+  database:
+    image: postgres
+    ports:
+      - "5433:5433"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=bookmarks
+      - PGPORT=5433
