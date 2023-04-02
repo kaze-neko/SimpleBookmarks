@@ -1,0 +1,170 @@
+:root {
+  --REGULAR_BACKGROUND_COLOR: #F4F4F4;
+  --REGULAR_BORDER_COLOR: #AAAAAA;
+  --FOCUS_BORDER_COLOR: #444444;
+  --HEAD_ELEMENT_BACKGRPUND_COLOR: #444444;
+  --SELECTED_ELEMENT_BACKGROUND_COLOR: #FAB005;
+  --GREEN_BUTTON_BACKGROUND_COLOR: #40985e;
+  --RED_BUTTON_BACKGROUND_COLOR: #e55d4d;
+  --GREY_BUTTON_BACKGROUND_COLOR: #DDDDDD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Indie Flower;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/*! COMMON CLASSES*/
+.hidden {
+  display: none;
+}
+
+.header-element {
+  border-radius: 10px;
+  border-color: var(--FOCUS_BORDER_COLOR);
+  font-weight: 600;
+  color: var(--REGULAR_BACKGROUND_COLOR);
+  background-color: var(--HEAD_ELEMENT_BACKGRPUND_COLOR);
+  text-align: center;
+}
+
+/*! CONTENT */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--REGULAR_BACKGROUND_COLOR);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+#tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 250px;
+  
+}
+
+/*! Border radiuses will be generated using js */
+#tags-title, .tag{
+  height: 40px;
+  line-height: 36px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 2px solid var(--REGULAR_BORDER_COLOR);
+  text-align: center;
+}
+
+#tags-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  border-color: var(--FOCUS_BORDER_COLOR);
+}
+
+.tag:hover {
+  border: 2px solid var(--FOCUS_BORDER_COLOR);
+  line-height: 36px;
+}
+
+input:checked + label {
+  background-color: var(--SELECTED_ELEMENT_BACKGROUND_COLOR);
+}
+
+#bookmarks {
+  display: flex;
+  flex-direction: column;
+  width: 735px;
+}
+
+#bookmarks-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+#bookmarks-header-title {
+  width: calc(100% - 175px);
+  height: 40px;
+  margin-right: 5px;
+  line-height: 40px;
+  background-color: var(--HEAD_ELEMENT_BACKGRPUND_COLOR);
+}
+
+#bookmarks-header-button {
+  height: 40px;
+  line-height: 36px;
+  width: 170px;
+  border-radius: 10px;
+  border: 2px solid var(--REGULAR_BORDER_COLOR);
+  background-color: var(--GREEN_BUTTON_BACKGROUND_COLOR);
+  font-weight: 600;
+  color: var(--REGULAR_BACKGROUND_COLOR);
+}
+
+#bookmarks-header-button:hover {
+  line-height: 36px;
+  border: 2px solid var(--FOCUS_BORDER_COLOR);
+}
+
+#bookmarks-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.bookmark{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.bookmark-content {
+  height: 40px;
+  line-height: 36px;
+  border-radius: 10px;
+  border: 2px solid var(--REGULAR_BORDER_COLOR);
+  margin-right: 5px;
+}
+
+.bookmark-content:hover {
+  border: 2px solid var(--FOCUS_BORDER_COLOR);
+}
+
+.bookmark-title {
+  width: calc(100% - 175px);
+  padding: 0px 10px;
+}
+
+.bookmark-tags, .bookmark-edit-button {
+  width: 60px;
+  text-align: center;
+  background-color: var(--GREY_BUTTON_BACKGROUND_COLOR);
+}
+
+.bookmark-remove-button {
+  width: 40px;
+  text-align: center;
+}
+
+.bookmark-remove-button {
+  margin-right: 0px;
+  background-color: var(--RED_BUTTON_BACKGROUND_COLOR);
+  font-weight: 600;
+  text-align: center;
+}

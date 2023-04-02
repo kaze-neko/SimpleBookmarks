@@ -3,39 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>SimpleBookmark</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- TODO : js-function that will process all objects marked with special tag -->
   <main>
+    <aside id="tags">
+      <p id="tags-title" class="header-element">Your Tags</p>
+      <input type="checkbox" id="tag-checkbox-ID_1" class="hidden">
+      <label for="tag-checkbox-ID_1" class="tag">Testing Test</label>
+      <input type="checkbox" id="tag-checkbox-ID_2" class="hidden">
+      <label for="tag-checkbox-ID_2" class="tag">Simple test</label>
+      <input type="checkbox" id="tag-checkbox-ID_3" class="hidden">
+      <label for="tag-checkbox-ID_3" class="tag">smth</label>
+      <input type="checkbox" id="tag-checkbox-ID_4" class="hidden">
+      <label for="tag-checkbox-ID_4" class="tag">Help, me please</label>
+      <input type="checkbox" id="tag-checkbox-ID_5" class="hidden">
+      <label for="tag-checkbox-ID_5" class="tag">WTF???</label>
+      <input type="checkbox" id="tag-checkbox-ID_6" class="hidden">
+      <label for="tag-checkbox-ID_6" class="tag">For every</label>
+      <input type="checkbox" id="tag-checkbox-ID_7" class="hidden">
+      <label for="tag-checkbox-ID_7" class="tag">Custom testt</label>
+      <input type="checkbox" id="tag-checkbox-ID_8" class="hidden">
+      <label for="tag-checkbox-ID_8" class="tag">What?</label>
+    </aside>
     <section id="bookmarks">
       <div id="bookmarks-header">
-        <p id="bookmarks-header-title">Your Bookmarks</p>
-        <button id="bookmarks-header-button">Add new</button>
+        <p id="bookmarks-header-title" class="header-element">Your Bookmarks</p>
+        <button id="bookmarks-header-button">New Bookmark</button>
       </div>
       <div id="bookmarks-content">
         <!-- ! Generated bookmarks will be here -->
-        <div id="bookmark-UNIQUE-ID">
-          <a id="bookmark-title-UNIQUE_ID">Test my bookmarking manager, please!</a>
-          <p id="bookmark-tags-UNIQUE_ID">Tags</p>
-          <button id="bookmark-edit-UNIQUE_ID">⟲</button>
-          <button id="bookmark-delete-UNIQUE_ID">X</button>
+        <div id="bookmark-UNIQUE-ID" class="bookmark">
+          <a id="bookmark-title-UNIQUE_ID" class="bookmark-content bookmark-title">Test my bookmarking manager, please!</a>
+          <p id="bookmark-tags-UNIQUE_ID" class="bookmark-content bookmark-tags">Tags</p>
+          <button id="bookmark-edit-UNIQUE_ID" class="bookmark-content bookmark-edit-button">Edit</button>
+          <button id="bookmark-delete-UNIQUE_ID" class="bookmark-content bookmark-remove-button">X</button>
         </div>
-        <div id="bookmark-UNIQUE_ID">
-          <a id="bookmark-title-UNIQUE_ID">Just one second and app will be down...</a>
-          <p id="bookmark-tags-UNIQUE_ID">Tags</p>
-          <button id="bookmark-edit-UNIQUE_ID">⟲</button>
-          <button id="bookmark-delete-UNIQUE_ID">X</button>
+        <div id="bookmark-UNIQUE_ID" class="bookmark">
+          <a id="bookmark-title-UNIQUE_ID" class="bookmark-content bookmark-title">Just one second and app will be down...</a>
+          <p id="bookmark-tags-UNIQUE_ID" class="bookmark-content bookmark-tags">Tags</p>
+          <button id="bookmark-edit-UNIQUE_ID" class="bookmark-content bookmark-edit-button">Edit</button>
+          <button id="bookmark-delete-UNIQUE_ID" class="bookmark-content bookmark-remove-button">X</button>
         </div>
       </div>
     </section>
-    <p id="line"></p>
-    <aside id="tags">
-      <p id="tags-title">Your Tags</p>
-      <button id="tag-UNIQUE_ID">Tag text</button>
-      <button id="tag-UNIQUE_ID">Tag 0</button>
-      <button id="tag-UNIQUE_ID">Help me</button>
-      <button id="tag-UNIQUE_ID">I am use it every time</button>
-    </aside>
   </main>
 </body>
 </html>
