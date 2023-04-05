@@ -180,18 +180,11 @@ input:checked + label {
 }
 
 #test {
-  width: 200px;
-  height: 50px;
+  width: 650px;
+  height: 40px;
   line-height: 30px;
-  border-width: 5px 25px;
+  border-width: 5px 10px;
   border-style: solid;
   text-align: center;
-  border-image: url("../light_border.svg") 5 25;
-}
-
-#test_background {
-  height: 50px;
-  width: 200px;
-  background: url("../fill.svg") no-repeat;
-  background-size: 100% 100%;
+  border-image: url("../resoursces/border_light_4.svg") 5 10;
 } */
