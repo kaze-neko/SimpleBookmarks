@@ -28,17 +28,16 @@
   display: none;
 }
 
-/* TODO turn on when script will be available */
-/* class to auto-generate hand-drawn border 
+/* class to auto-generate hand-drawn border  */
 .border {
   border-style: solid;
   border-width: 5px 25px;
-}*/
-/* class to auto-generate hand-drawn border for elements with small width 
+}
+/* class to auto-generate hand-drawn border for elements with small width  */
 .border-small {
   border-style: solid;
   border-width: 5px 5px;
-}*/
+}
 
 body {
   display: flex;
@@ -58,7 +57,6 @@ main {
 
 /* header elements used as titles for different containers */
 .header-element {
-  background-color: var(--HEAD_ELEMENT_BACKGROUND_COLOR); /*TODO delete (for test only)*/
   font-weight: 600;
   color: var(--REGULAR_BACKGROUND_COLOR);
 }
@@ -75,24 +73,16 @@ main {
   margin-bottom: 5px;
   width: 100%;
   height: 40px;
-  line-height: 36px; /* TODO change on 30px*/
-  border-style: solid; /* TODO delete (for test only) */
-  border-width: 2px; /* TODO delete (for test only) */
-  border-radius: 10px; /* TODO delete (for test only) */
-  border-color: var(--REGULAR_BORDER_COLOR); /* TODO delete (for test only) */
+  line-height: 30px;
+  border-radius: 10px;
 }
 
 
 #tags-title {
   margin-bottom: 15px;
-  border-color: var(--HEAD_ELEMENT_BORDER_COLOR);/* TODO remove when scrit will be available */
+  line-height: 40px;
 }
 
-/* TODO remove when scrit will be available */
-.tag:hover {
-  border-color: var(--FOCUS_BORDER_COLOR) !important;
-}
-/* TODO remove when scrit will be available */
 input:checked + label {
   background-color: var(--SELECTED_ELEMENT_BACKGROUND_COLOR);
 }
@@ -113,26 +103,18 @@ input:checked + label {
 
 #bookmarks-header * {
   height: 40px;
-  line-height: 36px; /* TODO change on 30px*/
-  border-style: solid; /* TODO delete (for test only) */
-  border-width: 2px; /* TODO delete (for test only) */
-  border-radius: 10px; /* TODO delete (for test only) */
+  line-height: 30px;
+  border-radius: 10px;
 }
 
 #bookmarks-header-title {
   width: calc(100% - 110px); /* width = 100% - (gap + tags + gap + remove button) = 100% - 5px - 60px - 5px - 40px */
-  border-color: var(--HEAD_ELEMENT_BORDER_COLOR); /*TODO delete (for test only)*/
+  line-height: 40px;
 }
 
 #bookmarks-header-create-button {
   width: 105px; /* width = tag + gap + button = 60 + 5 + 40 */
-  border-color: var(--REGULAR_BORDER_COLOR); /*TODO delete (for test only)*/
-  background-color: var(--CREATE_BUTTON_BACKGROUND_COLOR); /*TODO delete (for test only)*/
-}
-
-/*TODO delete (for test only)*/
-#bookmarks-header-create-button:hover {
-  border-color: var(--FOCUS_BORDER_COLOR); 
+  background-color: var(--CREATE_BUTTON_BACKGROUND_COLOR);
 }
 
 #bookmarks-content {
@@ -149,15 +131,8 @@ input:checked + label {
 
 .bookmark * {
   height: 40px;
-  line-height: 36px; /* TODO change on 30px*/
-  border-style: solid; /* TODO delete (for test only) */
-  border-width: 2px; /* TODO delete (for test only) */
-  border-radius: 10px; /* TODO delete (for test only) */
-  border-color: var(--REGULAR_BORDER_COLOR); /* TODO delete (for test only) */
-}
-
-.bookmark *:hover {
-  border-color: var(--FOCUS_BORDER_COLOR); /* TODO delete (for test only) */
+  line-height: 30px;
+  border-radius: 10px;
 }
 
 .bookmark-title {
@@ -166,25 +141,10 @@ input:checked + label {
 
 .bookmark-tags {
   width: 60px;
-  background-color: var(--TAGS_ELEMENT_BACKGROUND_COLOR); /* TODO delete (for test only) */
+  background-color: var(--TAGS_ELEMENT_BACKGROUND_COLOR);
 }
 
 .bookmark-remove-button {
   width: 40px;
-  background-color: var(--REMOVE_BUTTON_BACKGROUND_COLOR); /* TODO delete (for test only) */
+  background-color: var(--REMOVE_BUTTON_BACKGROUND_COLOR);
 }
-
-/* ! TEST STYLE FOR BORDERS AND FILL */
-/* main {
-  display: none;
-}
-
-#test {
-  width: 650px;
-  height: 40px;
-  line-height: 30px;
-  border-width: 5px 10px;
-  border-style: solid;
-  text-align: center;
-  border-image: url("../resoursces/border_light_4.svg") 5 10;
-} */

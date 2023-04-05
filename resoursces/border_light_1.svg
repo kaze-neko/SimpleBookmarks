@@ -10,6 +10,8 @@
    inkscape:export-filename="border_dark_2.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   sodipodi:docname="border_light_1.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +26,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     showgrid="false" />
+     showgrid="false"
+     inkscape:zoom="17.033234"
+     inkscape:cx="39.833893"
+     inkscape:cy="19.84356"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2833" />
   <g
@@ -52,10 +63,5 @@
        d="M 3.5154859,10.244595 C 6.7600499,9.698566 8.7248879,9.847132 10.389658,10.19647"
        id="path6134"
        sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#888888;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 19.743843,0.7837916 C 19.102154,0.47892427 18.982106,0.34288252 18.678184,0.46101204 16.841976,1.1747143 16.289981,0.48760976 15.467483,0.26481828"
-       id="path6136"
-       sodipodi:nodetypes="csc" />
   </g>
 </svg>
