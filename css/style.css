@@ -1,42 +1,49 @@
-:root {
+:root { 
   --REGULAR_BACKGROUND_COLOR: #F4F4F4;
-  --REGULAR_BORDER_COLOR: #AAAAAA;
+  --LIGHT_FONT_COLOR: #F4F4F4;
+  --REGULAR_BORDER_COLOR: #888888;
   --FOCUS_BORDER_COLOR: #444444;
-  --HEAD_ELEMENT_BACKGRPUND_COLOR: #444444;
+  --HEAD_ELEMENT_BACKGROUND_COLOR: #444444;
+  --HEAD_ELEMENT_BORDER_COLOR: #444444;
   --SELECTED_ELEMENT_BACKGROUND_COLOR: #FAB005;
-  --GREEN_BUTTON_BACKGROUND_COLOR: #40985e;
-  --RED_BUTTON_BACKGROUND_COLOR: #e55d4d;
-  --GREY_BUTTON_BACKGROUND_COLOR: #DDDDDD;
+  --CREATE_BUTTON_BACKGROUND_COLOR: #40985e;
+  --REMOVE_BUTTON_BACKGROUND_COLOR: #e55d4d;
+  --TAGS_ELEMENT_BACKGROUND_COLOR: #DDDDDD;
 }
 
+/* basic configuration */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
   box-sizing: border-box;
   font-family: Indie Flower;
   font-size: 18px;
   font-weight: 400;
+  text-align: center;
 }
 
-/*! COMMON CLASSES*/
 .hidden {
   display: none;
 }
 
-.header-element {
-  border-radius: 10px;
-  border-color: var(--FOCUS_BORDER_COLOR);
-  font-weight: 600;
-  color: var(--REGULAR_BACKGROUND_COLOR);
-  background-color: var(--HEAD_ELEMENT_BACKGRPUND_COLOR);
-  text-align: center;
-}
+/* TODO turn on when script will be available */
+/* class to auto-generate hand-drawn border 
+.border {
+  border-style: solid;
+  border-width: 5px 25px;
+}*/
+/* class to auto-generate hand-drawn border for elements with small width 
+.border-small {
+  border-style: solid;
+  border-width: 5px 5px;
+}*/
 
-/*! CONTENT */
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* center horizontally */
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--REGULAR_BACKGROUND_COLOR);
@@ -46,39 +53,46 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1000px;
+  width: 1000px; /* main_width = tags(aside) + gap + bookmarks(section) = 250 + 25 + 725*/
 }
 
+/* header elements used as titles for different containers */
+.header-element {
+  background-color: var(--HEAD_ELEMENT_BACKGROUND_COLOR); /*TODO delete (for test only)*/
+  font-weight: 600;
+  color: var(--REGULAR_BACKGROUND_COLOR);
+}
+
+/* styles for aside container with all tags */
 #tags {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   width: 250px;
-  
+  margin-right: 25px; /* gap between tags and bookmarks*/
 }
 
-/*! Border radiuses will be generated using js */
-#tags-title, .tag{
+#tags * {
+  margin-bottom: 5px;
+  width: 100%;
   height: 40px;
-  line-height: 36px;
-  margin-top: 5px;
-  border-radius: 10px;
-  border: 2px solid var(--REGULAR_BORDER_COLOR);
-  text-align: center;
+  line-height: 36px; /* TODO change on 30px*/
+  border-style: solid; /* TODO delete (for test only) */
+  border-width: 2px; /* TODO delete (for test only) */
+  border-radius: 10px; /* TODO delete (for test only) */
+  border-color: var(--REGULAR_BORDER_COLOR); /* TODO delete (for test only) */
 }
+
 
 #tags-title {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  line-height: 40px;
-  border-color: var(--FOCUS_BORDER_COLOR);
+  margin-bottom: 15px;
+  border-color: var(--HEAD_ELEMENT_BORDER_COLOR);/* TODO remove when scrit will be available */
 }
 
+/* TODO remove when scrit will be available */
 .tag:hover {
-  border: 2px solid var(--FOCUS_BORDER_COLOR);
-  line-height: 36px;
+  border-color: var(--FOCUS_BORDER_COLOR) !important;
 }
-
+/* TODO remove when scrit will be available */
 input:checked + label {
   background-color: var(--SELECTED_ELEMENT_BACKGROUND_COLOR);
 }
@@ -86,7 +100,7 @@ input:checked + label {
 #bookmarks {
   display: flex;
   flex-direction: column;
-  width: 735px;
+  width: 725px;
 }
 
 #bookmarks-header {
@@ -94,77 +108,90 @@ input:checked + label {
   flex-direction: row;
   justify-content: space-between;
   height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#bookmarks-header * {
+  height: 40px;
+  line-height: 36px; /* TODO change on 30px*/
+  border-style: solid; /* TODO delete (for test only) */
+  border-width: 2px; /* TODO delete (for test only) */
+  border-radius: 10px; /* TODO delete (for test only) */
 }
 
 #bookmarks-header-title {
-  width: calc(100% - 175px);
-  height: 40px;
-  margin-right: 5px;
-  line-height: 40px;
-  background-color: var(--HEAD_ELEMENT_BACKGRPUND_COLOR);
+  width: calc(100% - 110px); /* width = 100% - (gap + tags + gap + remove button) = 100% - 5px - 60px - 5px - 40px */
+  border-color: var(--HEAD_ELEMENT_BORDER_COLOR); /*TODO delete (for test only)*/
 }
 
-#bookmarks-header-button {
-  height: 40px;
-  line-height: 36px;
-  width: 170px;
-  border-radius: 10px;
-  border: 2px solid var(--REGULAR_BORDER_COLOR);
-  background-color: var(--GREEN_BUTTON_BACKGROUND_COLOR);
-  font-weight: 600;
-  color: var(--REGULAR_BACKGROUND_COLOR);
+#bookmarks-header-create-button {
+  width: 105px; /* width = tag + gap + button = 60 + 5 + 40 */
+  border-color: var(--REGULAR_BORDER_COLOR); /*TODO delete (for test only)*/
+  background-color: var(--CREATE_BUTTON_BACKGROUND_COLOR); /*TODO delete (for test only)*/
 }
 
-#bookmarks-header-button:hover {
-  line-height: 36px;
-  border: 2px solid var(--FOCUS_BORDER_COLOR);
+/*TODO delete (for test only)*/
+#bookmarks-header-create-button:hover {
+  border-color: var(--FOCUS_BORDER_COLOR); 
 }
 
 #bookmarks-content {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
 }
 
-.bookmark{
-  width: 100%;
+.bookmark {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.bookmark-content {
+.bookmark * {
   height: 40px;
-  line-height: 36px;
-  border-radius: 10px;
-  border: 2px solid var(--REGULAR_BORDER_COLOR);
-  margin-right: 5px;
+  line-height: 36px; /* TODO change on 30px*/
+  border-style: solid; /* TODO delete (for test only) */
+  border-width: 2px; /* TODO delete (for test only) */
+  border-radius: 10px; /* TODO delete (for test only) */
+  border-color: var(--REGULAR_BORDER_COLOR); /* TODO delete (for test only) */
 }
 
-.bookmark-content:hover {
-  border: 2px solid var(--FOCUS_BORDER_COLOR);
+.bookmark *:hover {
+  border-color: var(--FOCUS_BORDER_COLOR); /* TODO delete (for test only) */
 }
 
 .bookmark-title {
-  width: calc(100% - 175px);
-  padding: 0px 10px;
+  width: calc(100% - 110px); /* 110px = gap + tags + gap + remove button = 5 + 60 + 5 + 40 */
 }
 
-.bookmark-tags, .bookmark-edit-button {
+.bookmark-tags {
   width: 60px;
-  text-align: center;
-  background-color: var(--GREY_BUTTON_BACKGROUND_COLOR);
+  background-color: var(--TAGS_ELEMENT_BACKGROUND_COLOR); /* TODO delete (for test only) */
 }
 
 .bookmark-remove-button {
   width: 40px;
-  text-align: center;
+  background-color: var(--REMOVE_BUTTON_BACKGROUND_COLOR); /* TODO delete (for test only) */
 }
 
-.bookmark-remove-button {
-  margin-right: 0px;
-  background-color: var(--RED_BUTTON_BACKGROUND_COLOR);
-  font-weight: 600;
-  text-align: center;
+/* ! TEST STYLE FOR BORDERS AND FILL */
+/* main {
+  display: none;
 }
+
+#test {
+  width: 200px;
+  height: 50px;
+  line-height: 30px;
+  border-width: 5px 25px;
+  border-style: solid;
+  text-align: center;
+  border-image: url("../light_border.svg") 5 25;
+}
+
+#test_background {
+  height: 50px;
+  width: 200px;
+  background: url("../fill.svg") no-repeat;
+  background-size: 100% 100%;
+} */
